@@ -84,9 +84,11 @@ Why this format:
 
 - Can be parsed very simply (use a YAML library).
 
-- Can be written as an endless stream, and files can be appended to
+- Can be written as an endless stream, and files can be appended to.
 
-- Potentially very compact, yet human-readable.
+- Can be compact.
+
+- Human-readable.
 
 
 Notes:
@@ -94,6 +96,16 @@ Notes:
 - YAML parsing is rather slow (because strings don't need to be quoted, and
   some keywords are recognized from what could otherwise be a string),
   but a special-purpose parser for this format is trivial to write.
+
+Alternatives:
+
+- If the data consists of static keys and ever-changing real values (typically
+  the case of statistical data), you'd better stick to a 2D-text format, such
+  as CSV, which will be more compact and legible in such cases.
+
+- If the data consists of static keys and sees only some values change,
+  CSV can also be used with a stream adapter doing on-the-fly compression,
+  which will deal with redundancies.
 
 
 Processing Considerations
