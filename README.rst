@@ -9,7 +9,9 @@ The gist of it:
 
 - A data format:
 
-  - A text-based representation is YAML-based, it basically looks like this::
+  - A text-based representation is YAML-based, it basically looks like this:
+
+    .. code:: yaml
 
        - time: 0
          a: 1.3
@@ -17,7 +19,9 @@ The gist of it:
        - time: 2.00
          b: 1.5
 
-    or this::
+    or this:
+
+    .. code:: yaml
 
        - span: [2017-01, 2017-02]
          elec_consumption_kWh: 31.337
