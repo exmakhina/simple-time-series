@@ -41,6 +41,8 @@ not change for long periods, and exhaustively logging may be a waste of space.
 YAML-Based Text Data Format
 ###########################
 
+Specification:
+
 - List of entries
 
 - Each entry is a dictionary containing a "time" key and its value or a "span"
@@ -75,9 +77,21 @@ YAML-Based Text Data Format
      - time: 0
        temperature_degC: 51.4
 
+Why this format:
 
-Considerations
-##############
+- Can be written very simply (with :code:`fprintf()`).
+
+- Can be parsed very simply (use a YAML library).
+
+- Can be written as an endless stream, and files can be appended to
+
+- Potentially very compact, yet human-readable.
+
+
+
+
+Processing Considerations
+#########################
 
 Compaction
 **********
