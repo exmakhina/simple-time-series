@@ -77,6 +77,7 @@ Specification:
      - time: 0
        temperature_degC: 51.4
 
+
 Why this format:
 
 - Can be written very simply (with :code:`fprintf()`).
@@ -88,6 +89,11 @@ Why this format:
 - Potentially very compact, yet human-readable.
 
 
+Notes:
+
+- YAML parsing is rather slow (because strings don't need to be quoted, and
+  some keywords are recognized from what could otherwise be a string),
+  but a special-purpose parser for this format is trivial to write.
 
 
 Processing Considerations
